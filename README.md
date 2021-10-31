@@ -105,13 +105,6 @@ Check required, email, url, min, max, country code, phone number, regular expres
 
 ### oauth2
 ![oauth2](https://camo.githubusercontent.com/a6cd5e06400bce64e704cae6bca2de6726d8c8fa0968baec74f0c5aa018594c6/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4b615a64434239675a6745356c646543597a763834412e706e67)
-- google
-- facebook
-- linked in
-- twitter
-- microsoft
-- dropbox
-- amazon
 
 ### sign up
 ![sign up](https://camo.githubusercontent.com/3202736e57f5c785f1a1cf13b3a26876502547f49502358c239bd4006362b1fc/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a73586a4f4362654339796a586e684e32676c706950672e706e67)
