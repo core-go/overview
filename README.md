@@ -6,8 +6,9 @@
 ![Collection of libraries of core-go](https://camo.githubusercontent.com/a7ef78cfca52e23f9484a56432be01a37fb7744995f05a5910b5554b1838e208/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a78684574357079776e6c67747348594b4b76635f64512e706e67)
 
 ## Databases
-- SQL
-- Mongo
+![Database](https://camo.githubusercontent.com/01c9e6dda6af2e00cc011d137927a03fc038d64668ea4a2b436f0f899a4652c2/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6c31675a584649355175537831782d4b2d51433776512e706e67)
+- SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
+- Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
 - Casandra
 - Dynamodb
 - Firestore
@@ -15,25 +16,37 @@
 
 ## Storage
 ![storage](https://camo.githubusercontent.com/5f7b19bd0bc82451fa2a3c8b696715560d67f091b1597aaf3a3c644e82bd6e19/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a68657750665f4f61646b766f31674454696d6a5949512e706e67)
-- Samples are at (go-storage)[https://github.com/project-samples/go-storage]
+- Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
-## Minimize effort for cross-cutting concerns
-### Security
-- Identity and Access Management: Authorization at middleware, support http ([mux](https://github.com/gorilla/mux), [chi](https://github.com/go-chi/chi)), [gin](https://github.com/gin-gonic/gin), [echo](https://github.com/labstack/echo)
-- Crypto
-- JWT
+## Cross-cutting concerns
+![cross-cutting concerns](https://camo.githubusercontent.com/f18c275b941d7c2554549b906c1173daf3eb26b28192a893e799e0133192eead/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a526f352d47437572486756526c746a36746c555032772e706e67)
+- We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
+- We do not implement an AOP framework
 
-### Validator
-Check required, email, url, min, max, country code, phone number, regular expression... 
+#### Evaluate effort for cross-cutting concerns
+![Effort for cross-cutting concerns](https://camo.githubusercontent.com/49bd125a8efd5afd6a5aeb861a9aacddd1d9ed04048df04522446ef771d8aae1/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a584f633061764b42625f6c7366314d3966557a445a412e706e67)
+
+### Health Check
+![health](https://camo.githubusercontent.com/563b71e07ce74a6457066dc41260addf5e131db81b0903a0250a59cbd7634ae5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a316b4645637876714d445a665457476d4a54454537672e706e67)
+
 
 ### Logging
+#### Providers
 Standardize API for logging, support 2 libraries:
 - [logrus](https://github.com/sirupsen/logrus)
 - [zap](go.uber.org/zap)
 
-### Request Tracing
+#### Request Tracing
 - [middleware](https://github.com/core-go/middleware): Log request and response at http middleware, allow to configure dynamic field names
 - [client](https://github.com/core-go/client): Log request and response at http client, allow to configure dynamic field names
+
+#### Audit Log
+- Support for CRUD, search (not required in every application)
+
+### Security
+- Identity and Access Management: Authorization at middleware, support http ([mux](https://github.com/gorilla/mux), [chi](https://github.com/go-chi/chi)), [gin](https://github.com/gin-gonic/gin), [echo](https://github.com/labstack/echo)
+- Crypto
+- JWT
 
 ### Caching
 #### Memory Cache
@@ -44,8 +57,8 @@ Support 2 libraries
 - [go-redis](https://github.com/go-redis/redis)
 - [redigo](https://github.com/garyburd/redigo)
 
-### Audit Log
-Support for CRUD, search (not required in every application)
+### Validator
+Check required, email, url, min, max, country code, phone number, regular expression... 
 
 ### Search
 - Generate the model by URL
@@ -58,16 +71,16 @@ Support for CRUD, search (not required in every application)
 - Firestore
 - Elasticsearch
 
-## Communication
-### Email
+### Communication
+#### Email
 ![Email](https://camo.githubusercontent.com/1a239ae784d3f8c33517b2b4b0860f6e438432c6589191072ae773204918fc39/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a374a46344f47397a427973754a71724f4958324a76672e706e67)
 - Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
-- The sample is (go-authentication)[https://github.com/project-samples/go-authentication]
+- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
-### Message Queue
+#### Message Queue
 ![Message Queue](https://camo.githubusercontent.com/25ff46695aa80731f9814cff5036e38f65597cf76fd0cb93a1425745184a807a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a355049763841616a34673031585050466169433059412e706e67)
-#### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
-#### Support these providers
+##### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
+##### Support these providers
 - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
 - Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
 - Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/confluentinc/confluent-kafka-go)
@@ -76,11 +89,11 @@ Support for CRUD, search (not required in every application)
 - RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
 - IBM MQ at [ibm-mq](https://github.com/core-go/mq/tree/main/ibm-mq)
 
-#### Support 2 reusable business flows
+##### Support 2 reusable business flows
 - Consume message and handle one by one
 - Consume message and handle by batch
 
-## Reusable business components
+### Reusable business components
 ![Reusable business components](https://camo.githubusercontent.com/ea532f30062f85ea549d50ba4da256c99d4a978a1c5e4152a23dd6544b6fc4ab/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a484d41343065666c5f3431386f7950667541423751672e706e67)
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
