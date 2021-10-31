@@ -44,9 +44,11 @@ Standardize API for logging, support 2 libraries:
 - Support for CRUD, search (not required in every application)
 
 ### Security
+Sample is [go-admin](https://github.com/project-samples/go-admin)
 - Identity and Access Management: Authorization at middleware, support http ([mux](https://github.com/gorilla/mux), [chi](https://github.com/go-chi/chi)), [gin](https://github.com/gin-gonic/gin), [echo](https://github.com/labstack/echo)
 - Crypto
 - JWT
+
 
 ### Caching
 #### Memory Cache
@@ -61,6 +63,7 @@ Support 2 libraries
 Check required, email, url, min, max, country code, phone number, regular expression... 
 
 ### Search
+Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoffice](https://github.com/project-samples/go-backoffice) and [go-location](https://github.com/project-samples/go-location)
 - Generate the model by URL
 - Paging
 - Sort
