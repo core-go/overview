@@ -98,7 +98,7 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 - Consume message and handle by batch
 
 ### Reusable business components
-![Reusable business components](https://camo.githubusercontent.com/7cb15f5f95d72f2559ad31737384fb7c356e5d2285e0c9930443b32a2e9ecbe4/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a485f58376251623544544d55456749784c44325169772e706e67)
+![Reusable business components](https://camo.githubusercontent.com/196098587aa4c80f75f9016dafc9a3864ad37a5c8b1babcf481c7b78cdcf171e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7974674f70717a5f70654f4334566a32696e574b66672e706e67)
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 ### authentication
