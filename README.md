@@ -7,7 +7,7 @@
 ![Collection of libraries of core-go](https://camo.githubusercontent.com/60d52cda67f71d52dd27f42605b1f26cc55be9b34283d53126c761c1d8e11e16/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a434c4e3643377245456555755330714e7937476944672e706e67)
 
 ## Databases
-![Database](https://camo.githubusercontent.com/4f129f87818ba83ebb04f54ddd7b8339dd44248e120c93ab9d165680351895d3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6a56423167675250713536424c39332d4830547233512e706e67)
+![Database](https://camo.githubusercontent.com/5ebef248ab3a2d4003c084cd124ee6d93fe4a277326062e4e6230f07deffa506/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a5758506f39426e6939366167786449487636416361512e706e67)
 - SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
 - Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
 - Casandra
@@ -16,7 +16,7 @@
 - Elasticsearch
 
 ## Storage
-![storage](https://camo.githubusercontent.com/2514b228fc47efe0b178dd7bec1c29128b439b232a1025b082928a57250cbd6a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a724d58443479474e585736724c3448413237587346412e706e67)
+![storage](https://camo.githubusercontent.com/b99ed550f271abd46da477adaa49d0efafaf8d1a70e58d859b323c2ac9add6f8/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7a5f67774667656538376257476c675a5062366e62672e706e67)
 - Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
 ## Cross-cutting concerns
@@ -28,7 +28,7 @@
 ![Effort for cross-cutting concerns](https://camo.githubusercontent.com/c354215dd62ae32dcf5bd39389c5fff8be0abe2e93fccbb754191ea182d2f768/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6877347538646e75586d6436685649763053767579672e706e67)
 
 ### Health Check
-![health](https://camo.githubusercontent.com/90474880c142eb8681be645d52c2449c9942d4997fb383f48eca769a9063340a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6b70533341504345474a51354b7874764341745552512e706e67)
+![health](https://camo.githubusercontent.com/692970a4811bc01f49f8dee1a7a2dba432948642b04ece0bbd8102ba05b9c3c7/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4b637656684150685a662d6d31476f672d7a526953672e706e67)
 
 
 ### Logging
@@ -77,12 +77,12 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 
 ### Communication
 #### Email
-![Email](https://camo.githubusercontent.com/b59e219454a863f63a7de1d416abbca40e458d542d4e12ddf0f3d25531b470fd/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a5737344c72354849557168506e58444b497a4a6741772e706e67)
+![Email](https://camo.githubusercontent.com/7ba26c7805ed7fff7dc717418aa4dd3b3b685247e456368348eca8ad0f779bf5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4c73735658736c7a417a32676f77774d616f4a4831512e706e67)
 - Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 #### Message Queue
-![Message Queue](https://camo.githubusercontent.com/2092e042898e06a0019cab3fdc78ce996aace45474fb0be2621f992ac6707a89/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4c436632527437634d6b3953504e4a346758374579512e706e67)
+![Message Queue](https://camo.githubusercontent.com/4e9ee154bc7569d1c1f6d8e0fe6c6bfa0bd63ab62d03a517a4405c90f75668c7/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a52563656386d327736425977787255334955515558672e706e67)
 ##### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
 ##### Support these providers
 - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
