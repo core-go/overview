@@ -20,6 +20,7 @@
 - Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
 ## Cross-cutting concerns
+![A typical micro service](https://camo.githubusercontent.com/b9621c79896c9d5c1f7d3be610519c2caaa747ec77092e4e9e49afa6fd677ba5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a636d2d4f4b725645347a674e42506f51713165755f412e706e67)
 ![cross-cutting concerns](https://camo.githubusercontent.com/0040ccb77dfa3d9cd93f873f35caa2eb2672892f062f87467aede319ddd10bbf/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a56416c555f764b38777642723343703848636b6865512e706e67)
 - We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
 - We do not implement an AOP framework
