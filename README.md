@@ -1,13 +1,14 @@
 # overview
 - GO libraries to develop micro services
 ### Microservice Architect
-![Microservice Architect](https://camo.githubusercontent.com/909373b6f82e8870471feb67d019c52f69c01163b0ce9db0442617f13753ebaf/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a665530785930477077554e566c5a517a354f78504c672e706e67)
+![Microservice Architect](https://camo.githubusercontent.com/cf46a1780520d3612f1d81b219b56a14428fc24bb4ae9f4eede169aa9c58bee8/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a764b6565504f5f5543373369377466796d536d594e412e706e67)
 
 ### Libraries of core-go
-![Collection of libraries of core-go](https://camo.githubusercontent.com/60d52cda67f71d52dd27f42605b1f26cc55be9b34283d53126c761c1d8e11e16/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a434c4e3643377245456555755330714e7937476944672e706e67)
+![Collection of libraries of core-go](https://camo.githubusercontent.com/c9c636d48e5845439d0ee958a50b655767ce60c7d23152d7c95e0ad93d1ebd59/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a626e7348447a5458696c76666d492d48624e6e4b39512e706e67)
 
 ## Databases
-![Database](https://camo.githubusercontent.com/5ebef248ab3a2d4003c084cd124ee6d93fe4a277326062e4e6230f07deffa506/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a5758506f39426e6939366167786449487636416361512e706e67)
+![Database](https://camo.githubusercontent.com/afdab5cc52c2d69b5d8bebedd776d9440ac67544b295e6af1e453b7e9b6a26e3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a656f595865466d6c494f462d63684f4356714a6130412e706e67)
+
 - SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
 - Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
 - Casandra
@@ -16,12 +17,41 @@
 - Elasticsearch
 
 ## Storage
-![storage](https://camo.githubusercontent.com/b99ed550f271abd46da477adaa49d0efafaf8d1a70e58d859b323c2ac9add6f8/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7a5f67774667656538376257476c675a5062366e62672e706e67)
+![storage](https://camo.githubusercontent.com/8df4819a272d0e1c4cb235ce34448b4b4bb4fc480ced77238deacd98daafea1d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6a685a79423845364a4d547437714757473963666b412e706e67)
 - Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
+## A typical micro service
+![A typical micro service](https://camo.githubusercontent.com/f87f5b0d5d77ee5dcf1c49cfe166e2ce228f92f10be625001f805957f89b0b77/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a72595838486438757750686c324d37597167324969672e706e67)
+#### In the above image, you can see these libraries you need for a typical micro service
+- [authentication](https://github.com/core-go/auth)
+- [security](https://github.com/core-go/security)
+- [config](https://github.com/core-go/config)
+- [health](https://github.com/core-go/health)
+- [log](https://github.com/core-go/log)
+- [middleware](https://github.com/core-go/middleware)
+- [cache](https://github.com/core-go/cache)
+- [redis](https://github.com/core-go/redis)
+- [validator](https://github.com/core-go/validator)
+- [client](https://github.com/core-go/client)
+- [mail](https://github.com/core-go/mail)
+  - [smtp](https://github.com/core-go/mail/tree/main/smtp)
+  - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
+- [mq](https://github.com/core-go/mq)
+  - [Amazon SQS](https://github.com/core-go/mq/tree/main/sqs)
+  - [Google Pub/Sub](https://github.com/core-go/mq/tree/main/pubsub)
+  - [kafka](https://github.com/core-go/mq/tree/main/kafka)
+  - [NATS](https://github.com/core-go/mq/tree/main/nats)
+  - [Active MQ](https://github.com/core-go/mq/tree/main/activemq)
+  - [Rabbit MQ](https://github.com/core-go/mq/tree/main/rabbitmq)
+  - [IBM MQ](https://github.com/core-go/mq/tree/main/ibmmq)
+- [storage](https://github.com/core-go/storage)
+  - [Google](https://github.com/core-go/storage/tree/main/google)
+  - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
+- [sql](https://github.com/core-go/sql)
+- [mongo](https://github.com/core-go/mongo)
+
 ## Cross-cutting concerns
-![A typical micro service](https://camo.githubusercontent.com/b9621c79896c9d5c1f7d3be610519c2caaa747ec77092e4e9e49afa6fd677ba5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a636d2d4f4b725645347a674e42506f51713165755f412e706e67)
-![cross-cutting concerns](https://camo.githubusercontent.com/0040ccb77dfa3d9cd93f873f35caa2eb2672892f062f87467aede319ddd10bbf/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a56416c555f764b38777642723343703848636b6865512e706e67)
+![cross-cutting concerns](https://camo.githubusercontent.com/0416e6d9aa090b3b42901b4dd22b19c8962abe6c589988b1e97dea97b63a278d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7930383854344e6f4a4e724c397371724b65537971772e706e67)
 - We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
 - We do not implement an AOP framework
 
@@ -29,8 +59,7 @@
 ![Effort for cross-cutting concerns](https://camo.githubusercontent.com/c354215dd62ae32dcf5bd39389c5fff8be0abe2e93fccbb754191ea182d2f768/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6877347538646e75586d6436685649763053767579672e706e67)
 
 ### Health Check
-![health](https://camo.githubusercontent.com/692970a4811bc01f49f8dee1a7a2dba432948642b04ece0bbd8102ba05b9c3c7/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4b637656684150685a662d6d31476f672d7a526953672e706e67)
-
+![health](https://camo.githubusercontent.com/49287a63a0e1c52818c4321650b3f8cf2348d5f50108aed820cd6441fbb2574d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6746457a416b7674666e51575665463265644b7767512e706e67)
 
 ### Logging
 #### Providers
@@ -51,6 +80,7 @@ Sample is [go-admin](https://github.com/project-samples/go-admin)
 - Crypto
 - JWT
 
+- library is here [security](https://github.com/core-go/security)
 
 ### Caching
 #### Memory Cache
@@ -63,6 +93,7 @@ Support 2 libraries
 
 ### Validator
 Check required, email, url, min, max, country code, phone number, regular expression... 
+- [validator](https://github.com/core-go/validator)
 
 ### Search
 Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoffice](https://github.com/project-samples/go-backoffice) and [go-location](https://github.com/project-samples/go-location)
@@ -78,49 +109,99 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 
 ### Communication
 #### Email
-![Email](https://camo.githubusercontent.com/7ba26c7805ed7fff7dc717418aa4dd3b3b685247e456368348eca8ad0f779bf5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4c73735658736c7a417a32676f77774d616f4a4831512e706e67)
+![Email](https://camo.githubusercontent.com/0fcd0826eea9b9883077ac1674e45c4eafa17e7abb02f8d2659fb30bc2b084e5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a2d6c486a7872355a4d6b4b634c6961746776364731672e706e67)
 - Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 #### Message Queue
-![Message Queue](https://camo.githubusercontent.com/4e9ee154bc7569d1c1f6d8e0fe6c6bfa0bd63ab62d03a517a4405c90f75668c7/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a52563656386d327736425977787255334955515558672e706e67)
+![Message Queue](https://camo.githubusercontent.com/31291934a502f50fda6ec65981f77e601efa450f7ef32b3e4bd9041355d68e3e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a55624b4a753242634159696d385f6f4a67384e7336412e706e67)
 ##### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
-##### Support these providers
-- Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
-- Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
-- Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/confluentinc/confluent-kafka-go)
-- NATS at [nats](https://github.com/core-go/mq/tree/main/nats)
-- Active MQ at [amq](https://github.com/core-go/mq/tree/main/amq)
-- RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
-- IBM MQ at [ibm-mq](https://github.com/core-go/mq/tree/main/ibm-mq)
+##### Flow to consume a message from a queue
+![Flow to consume a message](https://camo.githubusercontent.com/782bbf69a516401c3918b7e920d8fc25521112d8b04e890f2455768551f6d64e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a593451554e36516e666d4a67614b6967634e486251412e706e67)
+- Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
+- Use [core-go/mq](https://github.com/core-go/mq)
+- Support these message queues:
+  - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
+  - Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
+  - Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/core-go/mq/tree/main/confluent)
+  - NATS at [nats](https://github.com/core-go/mq/tree/main/nats)
+  - Active MQ at [amq](https://github.com/core-go/mq/tree/main/amq)
+  - RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
+  - IBM MQ at [ibm-mq](https://github.com/core-go/mq/tree/main/ibm-mq)
+- Support these databases
+  - SQL
+  - Mongo
+  - Casandra
+  - Dynamodb
+  - Firestore
+  - Elasticsearch
 
 ##### Support 2 reusable business flows
 - Consume message and handle one by one
 - Consume message and handle by batch
 
 ### Reusable business components
-![Reusable business components](https://camo.githubusercontent.com/196098587aa4c80f75f9016dafc9a3864ad37a5c8b1babcf481c7b78cdcf171e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7974674f70717a5f70654f4334566a32696e574b66672e706e67)
+![Reusable business components](https://camo.githubusercontent.com/d47b277783bd12f7560123878265c9446368a092937cf2d37fcf54c14e872d83/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4834474a415f53705f73366967396b5f41415a3561672e706e67)
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
-### authentication
-![Authentication](https://camo.githubusercontent.com/dd7972afcd6300a4571b3807b3238b08c6bf132133d33a76c498617d4bfd615a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6f34784e4553485f4a795f69345046427a52436957772e706e67)
-- authenticator
-- ldap authenticator
-- 2 factor authentication
-
-### oauth2
-![oauth2](https://camo.githubusercontent.com/07cb7243c5e9591b86cfc5475d6fad4e0a079926b4c32063bf810def50ba33f6/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4d4b627257417a482d447630707274684c72537153512e706e67)
-
 ### sign up
-![sign up](https://camo.githubusercontent.com/15c9751800708b30bd57faf6c7b0aeb002b6c04d598a1230c11d4bb0e6a6055a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a5375664a696235573549685a6e70682d4668756d56412e706e67)
+![sign up](https://camo.githubusercontent.com/6731bc23c5c74d5a19a860ddc50a9af188434632ecfe5b2dda90397759b7de39/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a3073646b717a646479663339374e56776b56645269772e706e67)
 #### sign up with password
 - sign up with password
 - verify account (without password)
 #### sign up without password
 - sign up without password
 - verify account (require to input password)
+
+### authentication
+![Authentication](https://camo.githubusercontent.com/961908454560f4fdcd044a27e1741bc13d8440d794ad69d4fd6bf77023195701/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7652314a553030384e555234774b4567717766756f412e706e67)
+- authenticator
+- ldap authenticator
+- 2 factor authentication
+
+### oauth2
+![oauth2](https://camo.githubusercontent.com/782b650c42e2a73f79e729e77176f3dbd5edf51b683e13ebdae0a6f5e4cdd7b2/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6153765054544461532d386c674f4164544d6e6335412e706e67)
+
 ### password
-![password](https://camo.githubusercontent.com/766423fa9a3261e77ddbd96a7b38bd5bb1a593f762b2d9f9c9975823192df17d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a664a513468784559714d43566652706e31716c6370412e706e67)
+![password](https://camo.githubusercontent.com/d27ddd22c67677cd23a53df92f070d54dce337caa2cf91ee1c36c354112f1551/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a79684969414c6a4a514a373062354866796265666b512e706e67)
 - forgot password
 - change password (also support change password 2 factors)
 - reset password
+
+## Low code
+### Components
+![Components](https://camo.githubusercontent.com/c95340f3089dc8535b668c08bfa32086d3d7b64998f687284357fd27028eca95/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a476f314777666d704274566441556e747252327179512e706e67)
+#### Commandline
+##### export
+- input: database, project settings
+- output: metadata
+##### generate
+- input: metadata, project templates
+- output: project (working application)
+#### GUI
+##### generator
+- GUI, include "export" and "generate"
+
+### Business View
+![Business View](https://camo.githubusercontent.com/8a7981234d8731878d566e6da0cd02804b93f4e9cd23c7e1ef33a810c5f66cee/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a68317942526c435750554d417653355a77356b3461672e706e67)
+#### Download
+- https://github.com/lowcode-tech/windows
+- https://github.com/lowcode-tech/mac
+- https://github.com/lowcode-tech/linux
+#### Output Samples
+https://github.com/source-code-template
+##### GO Layer Architecture Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/go-sql-layer-architecture-sample
+##### GO Modular Sample
+- https://github.com/source-code-template/go-mongo-modular-sample
+- https://github.com/source-code-template/go-sql-modular-sample
+##### nodejs Layer Architecture Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/sql-layer-architecture-sample
+##### nodejs Modular Sample
+- https://github.com/source-code-template/mongo-layer-architecture-sample
+- https://github.com/source-code-template/sql-layer-architecture-sample
+##### nodejs Simple Modular Sample
+- https://github.com/source-code-template/mongo-simple-modular-sample
+- https://github.com/source-code-template/sql-simple-modular-sample
