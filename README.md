@@ -3,24 +3,8 @@
 ### Microservice Architect
 ![Microservice Architect](https://camo.githubusercontent.com/cf46a1780520d3612f1d81b219b56a14428fc24bb4ae9f4eede169aa9c58bee8/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a764b6565504f5f5543373369377466796d536d594e412e706e67)
 
-### Libraries of core-go
-![Collection of libraries of core-go](https://camo.githubusercontent.com/c9c636d48e5845439d0ee958a50b655767ce60c7d23152d7c95e0ad93d1ebd59/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a626e7348447a5458696c76666d492d48624e6e4b39512e706e67)
-
-## Databases
-![Database](https://camo.githubusercontent.com/afdab5cc52c2d69b5d8bebedd776d9440ac67544b295e6af1e453b7e9b6a26e3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a656f595865466d6c494f462d63684f4356714a6130412e706e67)
-
-- SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
-- Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
-- Casandra
-- Dynamodb
-- Firestore
-- Elasticsearch
-
-## Storage
-![storage](https://camo.githubusercontent.com/8df4819a272d0e1c4cb235ce34448b4b4bb4fc480ced77238deacd98daafea1d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6a685a79423845364a4d547437714757473963666b412e706e67)
-- Samples are at [go-storage](https://github.com/project-samples/go-storage)
-
-## A typical micro service
+### A typical micro service
+When you zoom one micro service, the flow is as below
 ![A typical micro service](https://camo.githubusercontent.com/f87f5b0d5d77ee5dcf1c49cfe166e2ce228f92f10be625001f805957f89b0b77/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a72595838486438757750686c324d37597167324969672e706e67)
 #### In the above image, you can see these libraries you need for a typical micro service
 - [authentication](https://github.com/core-go/auth)
@@ -48,15 +32,36 @@
   - [Google](https://github.com/core-go/storage/tree/main/google)
   - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
 - [sql](https://github.com/core-go/sql)
+- [cassandra](https://github.com/core-go/cassandra)
 - [mongo](https://github.com/core-go/mongo)
+- [firestore](https://github.com/core-go/firestore)
+- [dynamodb](https://github.com/core-go/dynamodb)
+- [elasticsearch](https://github.com/core-go/elasticsearch)
 
-## Cross-cutting concerns
+### Cross-cutting concerns
 ![cross-cutting concerns](https://camo.githubusercontent.com/0416e6d9aa090b3b42901b4dd22b19c8962abe6c589988b1e97dea97b63a278d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7930383854344e6f4a4e724c397371724b65537971772e706e67)
 - We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
 - We do not implement an AOP framework
 
 #### Evaluate effort for cross-cutting concerns
 ![Effort for cross-cutting concerns](https://camo.githubusercontent.com/c354215dd62ae32dcf5bd39389c5fff8be0abe2e93fccbb754191ea182d2f768/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6877347538646e75586d6436685649763053767579672e706e67)
+
+### Summary: Libraries of core-go
+![Collection of libraries of core-go](https://camo.githubusercontent.com/c9c636d48e5845439d0ee958a50b655767ce60c7d23152d7c95e0ad93d1ebd59/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a626e7348447a5458696c76666d492d48624e6e4b39512e706e67)
+
+## Databases
+![Database](https://camo.githubusercontent.com/afdab5cc52c2d69b5d8bebedd776d9440ac67544b295e6af1e453b7e9b6a26e3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a656f595865466d6c494f462d63684f4356714a6130412e706e67)
+
+- SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
+- Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
+- Casandra
+- Dynamodb
+- Firestore
+- Elasticsearch
+
+## Storage
+![storage](https://camo.githubusercontent.com/8df4819a272d0e1c4cb235ce34448b4b4bb4fc480ced77238deacd98daafea1d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6a685a79423845364a4d547437714757473963666b412e706e67)
+- Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
 ### Health Check
 ![health](https://camo.githubusercontent.com/49287a63a0e1c52818c4321650b3f8cf2348d5f50108aed820cd6441fbb2574d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6746457a416b7674666e51575665463265644b7767512e706e67)
@@ -125,9 +130,9 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
   - Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
   - Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/core-go/mq/tree/main/confluent)
   - NATS at [nats](https://github.com/core-go/mq/tree/main/nats)
-  - Active MQ at [amq](https://github.com/core-go/mq/tree/main/amq)
+  - Active MQ at [activemq](https://github.com/core-go/mq/tree/main/activemq)
   - RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
-  - IBM MQ at [ibm-mq](https://github.com/core-go/mq/tree/main/ibm-mq)
+  - IBM MQ at [ibmmq](https://github.com/core-go/mq/tree/main/ibmmq)
 - Support these databases
   - SQL
   - Mongo
