@@ -5,7 +5,9 @@
 
 ### A typical micro service
 When you zoom one micro service, the flow is as below
-![A typical micro service](https://camo.githubusercontent.com/f87f5b0d5d77ee5dcf1c49cfe166e2ce228f92f10be625001f805957f89b0b77/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a72595838486438757750686c324d37597167324969672e706e67)
+![A typical micro service](https://camo.githubusercontent.com/00ab9dde746fd17a0bdad0412771cf63d4baeee2555309cb8bfab313a60af337/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a79346b72615076544a34732d6c65334855696b3776512e706e67)
+#### Hexagonal Architecture
+![Hexagonal Architecture](https://camo.githubusercontent.com/75f0d073436f60955f94bb9f8075cb7a1b5a28b446a517a1acbb963ffe48b6d4/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a5443765a6d4a786256686a6e535173666646494132512e706e67)
 #### In the above image, you can see these libraries you need for a typical micro service
 - [authentication](https://github.com/core-go/auth)
 - [security](https://github.com/core-go/security)
@@ -17,6 +19,7 @@ When you zoom one micro service, the flow is as below
 - [redis](https://github.com/core-go/redis)
 - [validator](https://github.com/core-go/validator)
 - [client](https://github.com/core-go/client)
+- [io](https://github.com/core-go/io)
 - [mail](https://github.com/core-go/mail)
   - [smtp](https://github.com/core-go/mail/tree/main/smtp)
   - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
