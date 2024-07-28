@@ -1,73 +1,159 @@
-# overview
-- GO libraries to develop micro services
-### Microservice Architect
-![Microservice Architect](https://camo.githubusercontent.com/cf46a1780520d3612f1d81b219b56a14428fc24bb4ae9f4eede169aa9c58bee8/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a764b6565504f5f5543373369377466796d536d594e412e706e67)
+# Overview
+## What is a Microservice
+A microservice is an architectural style that structures an application as a collection of small, loosely coupled, independently deployable services. Each service typically focuses on a specific business capability and can be developed, deployed, and scaled independently. Microservices communicate with each other through well-defined APIs, often using lightweight protocols such as HTTP/REST, gRPC, or messaging queues.
+
+![Microservice Architect](https://cdn-images-1.medium.com/max/800/1*vKeePO_UC73i7tfymSmYNA.png)
+### Comparison: Microservice vs. Monolithic Architecture
+#### Monolithic Architecture
+- <b>Structure</b>: A single, unified codebase where all components are tightly integrated.
+- <b>Deployment</b>: Deployed as a single unit. Any change or update requires redeploying the entire application.
+- <b>Development</b>: Usually simpler to develop initially but can become complex and difficult to manage as the application grows.
+- <b>Scaling</b>: Scaling requires scaling the entire application, even if only a small part of it requires more resources.
+#### Microservice Architecture
+- <b>Structure</b>: Composed of multiple, independent services, each responsible for a specific business function.
+- <b>Deployment</b>: Each service can be deployed independently, allowing for continuous deployment and updates.
+- <b>Development</b>: Enables teams to work on different services simultaneously, often with different technologies and frameworks.
+- <b>Scaling</b>: Allows for granular scaling, where individual services can be scaled independently based on their specific resource needs.
+
+### Advantages of Microservices
+#### Independent Deployment
+- Each service can be deployed, updated, and scaled independently, reducing the risk of deployment failures and allowing for faster release cycles.
+#### Technology Diversity
+- Teams can choose the best technology stack for each service based on its requirements, enabling the use of the latest and most suitable technologies.
+#### Fault Isolation
+- Failures in one service do not necessarily affect other services, enhancing the overall resilience and reliability of the application.
+#### Scalability
+- Services can be scaled independently, allowing for more efficient use of resources and cost-effective scaling.
+#### Organizational Alignment
+- Microservices align well with agile and DevOps practices, allowing teams to be more autonomous and responsible for specific services.
+#### Improved Maintainability
+- Smaller codebases are easier to understand, maintain, and refactor, leading to better code quality and reduced technical debt.
+### Disadvantages of Microservices
+#### Complexity:
+- Managing multiple services, including their deployment, monitoring, and communication, introduces significant complexity compared to a monolithic application.
+#### Distributed System Challenges
+- Issues such as network latency, message serialization, and handling partial failures need to be addressed.
+#### Data Consistency
+- Maintaining data consistency across services can be challenging and often requires implementing complex patterns like eventual consistency and distributed transactions.
+#### Increased Resource Consumption
+- Running multiple services often requires more resources, such as CPU, memory, and storage, compared to a monolithic application.
+#### DevOps Overhead
+- Requires robust DevOps practices, including continuous integration, continuous deployment, containerization, and orchestration tools like Kubernetes.
+#### Inter-Service Communication
+- Communication between services needs to be carefully managed to ensure efficient and reliable interactions, often requiring additional infrastructure like API gateways and service meshes.
+
+### Use Cases of Microservices
+#### E-commerce Platforms
+- Individual services for user management, product catalog, inventory, payment processing, and order management.
+#### Financial Systems
+- Separate services for account management, transaction processing, fraud detection, and reporting.
+#### Social Media Applications
+- Distinct services for user profiles, posts, comments, likes, notifications, and messaging.
+#### Healthcare Systems
+- Independent services for patient records, appointment scheduling, billing, and prescription management.
+### Conclusion
+Microservices offer significant benefits in terms of flexibility, scalability, and maintainability, making them suitable for large, complex applications with high demands for agility and reliability. However, they also introduce considerable complexity and require sophisticated DevOps practices and infrastructure. The choice between monolithic and microservice architecture depends on the specific requirements, scale, and maturity of the development and operations teams within an organization.
+
+## core-go
+GO libraries to develop micro services.
 
 ### A typical micro service
 When you zoom one micro service, the flow is as below
-![A typical micro service](https://camo.githubusercontent.com/581033268b9152e7ea8881904f533a51a29eeb3a63e8d6478540668c6e422ce3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a64396b79656b416251594278482d4336773338585a512e706e67)
-#### Hexagonal Architecture
-![Hexagonal Architecture](https://camo.githubusercontent.com/f269cbeebcc31cc4adf5d6080a29d776b0f2e5293a8f1f1e5a73b7b835a5291c/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a446d6635374f32466b6278366b7465617135525655772e706e67)
+![A typical micro service](https://cdn-images-1.medium.com/max/800/1*d9kyekAbQYBxH-C6w38XZQ.png)
+
 #### In the above image, you can see these libraries you need for a typical micro service
-- [authentication](https://github.com/core-go/auth)
-- [security](https://github.com/core-go/security)
-- [config](https://github.com/core-go/config)
-- [health](https://github.com/core-go/health)
+
+### Database
+- Simplify common database operations, such as CRUD (Create, Read, Update, Delete) operations, transactions, and batch processing, by providing high-level abstractions and utilities.
+- Generic CRUD Repository 
+  - It is like [CrudRepository](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html) of Spring, which promotes rapid development and consistency across applications.
+  - While it provides many advantages, such as reducing boilerplate code and ensuring transactional integrity, it also offers flexibility and control over complex queries.
+#### Support these databases
+- [SQL](https://github.com/core-go/sql). The sample is at [go-sql-generic-sample](https://github.com/source-code-template/go-sql-generic-sample).
+- [Mongo](https://github.com/core-go/mongo). The sample is at [go-mongo-generic-sample](https://github.com/source-code-template/go-mongo-generic-sample).
+- [Cassandra](https://github.com/core-go/cassandra). The sample is at [go-cassandra-sample](https://github.com/source-code-template/go-cassandra-sample).
+- [Firestore](https://github.com/core-go/firestore). The sample is at [go-firestore-sample](https://github.com/go-tutorials/go-firestore-sample).
+- [Elastic Search](https://github.com/core-go/elasticsearch). The sample is at [go-elastic-search-generic-sample](https://github.com/source-code-template/go-elastic-search-generic-sample).
+- [Hive](https://github.com/core-go/hive). The sample is at [go-hive-sample](https://github.com/go-tutorials/go-hive-sample).
+- [Dynamodb](https://github.com/core-go/dynamodb). The sample is at [go-dynamodb-tutorial](https://github.com/go-tutorials/go-dynamodb-tutorial).
+
+### Data Processing
+Visit [github.com/core-go/io](https://github.com/core-go/io), you can see rich data processing:
+- Import data from CSV or fix-length format files to [SQL](https://github.com/core-go/sql), [Mongo](https://github.com/core-go/mongo), [Cassandra](https://github.com/core-go/cassandra), [Firestore](https://github.com/core-go/firestore), [Elastic Search](https://github.com/core-go/elasticsearch), [Hive](https://github.com/core-go/hive)
+- Export data from [SQL](https://github.com/project-samples/go-sql-export), [Mongo](https://github.com/project-samples/go-mongo-export), [Cassandra](https://github.com/project-samples/go-cassandra-export), [Firestore](https://github.com/project-samples/go-firestore-export), [Hive](https://github.com/project-samples/go-hive-export) to CSV or fix-length format files
+
+### Message Queue
+- Please visit [core-go/mq](https://github.com/core-go/mq).
+- Because message queues are a crucial component in modern software architecture, we support most of message queues, such as [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
+
+### Health Check
+Please visit [core-go/health](https://github.com/core-go/health). We support databases, message queues, redis, http client:
+- [http client](https://github.com/core-go/health/blob/main/http/health_checker.go)
+- Redis: [go-redis/redis](https://github.com/core-go/health/blob/main/redis/v9/health_checker.go) to support [redis/go-redis](https://github.com/redis/go-redis), [garyburd/redigo](https://github.com/core-go/health/blob/main/redigo/health_checker.go) to support [gomodule/redigo](https://github.com/gomodule/redigo).
+- Database: [sql](https://github.com/core-go/health/blob/main/sql/health_checker.go), [mongo](https://github.com/core-go/health/blob/main/mongo/health_checker.go), [dynamodb](https://github.com/core-go/health/blob/main/dynamodb/health_checker.go), [firestore](https://github.com/core-go/health/blob/main/firestore/health_checker.go), [elasticsearch](https://github.com/core-go/health/blob/main/elasticsearch/v8/health_checker.go), [cassandra](https://github.com/core-go/health/blob/main/cassandra/health_checker.go), [hive](https://github.com/core-go/health/blob/main/hive/health_checker.go)
+- Message queues: [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
+
+
+  ![health](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
+
+### Authentication
+Please visit [Authentication](https://github.com/core-go/authentication), we support:
+- Support to log in by user name/password
+- Login by LDAP (both server side and client slide)
+- Login by Google, Facebook, Linkedin, Microsoft, Amazon, Dropbox
+- Support any database design (SQL, Mongo, Firestore, Cassandra)
+
+### Authorization
+Please visit [security](https://github.com/core-go/security):
+Sample is [go-admin](https://github.com/project-samples/go-admin)
+- Identity and Access Management: Authorization at middleware, support http ([mux](https://github.com/gorilla/mux), [chi](https://github.com/go-chi/chi)), [gin](https://github.com/gin-gonic/gin), [echo](https://github.com/labstack/echo)
+  - Support any database design (SQL, Mongo, Firestore, Cassandra)
+- Crypto
+- JWT
+
+### Logging
 - [log](https://github.com/core-go/log)
+  - Wrap logrus and zap 
 - [middleware](https://github.com/core-go/middleware)
+  - Middleware logging is a technique used in software development, particularly in web and microservices applications, to log important information about incoming requests, outgoing responses, and the operations performed by the application.
+
+### Email
+- Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
+- [mail](https://github.com/core-go/mail)
+  - [smtp](https://github.com/core-go/mail/tree/main/smtp)
+  - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
+- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
+
+  ![Email](https://cdn-images-1.medium.com/max/800/1*-lHjxr5ZMkKcLiatgv6G1g.png) 
+
+### Storage
+- [storage](https://github.com/core-go/storage)
+  - [Google](https://github.com/core-go/storage/tree/main/google)
+  - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
+- Samples are at [go-storage](https://github.com/project-samples/go-storage)
+
+  ![storage](https://cdn-images-1.medium.com/max/800/1*jhZyB8E6JMTt7qGWG9cfkA.png)
+
+### Others
+- [config](https://github.com/core-go/config)
 - [cache](https://github.com/core-go/cache)
 - [redis](https://github.com/core-go/redis)
 - [validator](https://github.com/core-go/validator)
 - [client](https://github.com/core-go/client)
-- [io](https://github.com/core-go/io)
-- [mail](https://github.com/core-go/mail)
-  - [smtp](https://github.com/core-go/mail/tree/main/smtp)
-  - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
-- [mq](https://github.com/core-go/mq)
-  - [Amazon SQS](https://github.com/core-go/mq/tree/main/sqs)
-  - [Google Pub/Sub](https://github.com/core-go/mq/tree/main/pubsub)
-  - [kafka](https://github.com/core-go/mq/tree/main/kafka)
-  - [NATS](https://github.com/core-go/mq/tree/main/nats)
-  - [Active MQ](https://github.com/core-go/mq/tree/main/activemq)
-  - [Rabbit MQ](https://github.com/core-go/mq/tree/main/rabbitmq)
-  - [IBM MQ](https://github.com/core-go/mq/tree/main/ibmmq)
-- [storage](https://github.com/core-go/storage)
-  - [Google](https://github.com/core-go/storage/tree/main/google)
-  - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
-- [sql](https://github.com/core-go/sql)
-- [cassandra](https://github.com/core-go/cassandra)
-- [mongo](https://github.com/core-go/mongo)
-- [firestore](https://github.com/core-go/firestore)
-- [dynamodb](https://github.com/core-go/dynamodb)
-- [elasticsearch](https://github.com/core-go/elasticsearch)
+
+#### Hexagonal Architecture
+![Hexagonal Architecture](https://cdn-images-1.medium.com/max/800/1*Dmf57O2Fkbx6kteaq5RVUw.png)
 
 ### Cross-cutting concerns
-![cross-cutting concerns](https://camo.githubusercontent.com/0416e6d9aa090b3b42901b4dd22b19c8962abe6c589988b1e97dea97b63a278d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7930383854344e6f4a4e724c397371724b65537971772e706e67)
+![cross-cutting concerns](https://cdn-images-1.medium.com/max/800/1*y088T4NoJNrL9sqrKeSyqw.png)
 - We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
 - We do not implement an AOP framework
 
 #### Evaluate effort for cross-cutting concerns
-![Effort for cross-cutting concerns](https://camo.githubusercontent.com/c354215dd62ae32dcf5bd39389c5fff8be0abe2e93fccbb754191ea182d2f768/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6877347538646e75586d6436685649763053767579672e706e67)
+![Effort for cross-cutting concerns](https://cdn-images-1.medium.com/max/800/1*hw4u8dnuXmd6hVIv0Svuyg.png)
 
 ### Summary: Libraries of core-go
-![Collection of libraries of core-go](https://camo.githubusercontent.com/c9c636d48e5845439d0ee958a50b655767ce60c7d23152d7c95e0ad93d1ebd59/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a626e7348447a5458696c76666d492d48624e6e4b39512e706e67)
-
-## Databases
-![Database](https://camo.githubusercontent.com/afdab5cc52c2d69b5d8bebedd776d9440ac67544b295e6af1e453b7e9b6a26e3/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a656f595865466d6c494f462d63684f4356714a6130412e706e67)
-
-- SQL: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
-- Mongo: Sample is [go-sql-mongo-rest-api](https://github.com/source-code-template/go-sql-mongo-rest-api)
-- Casandra
-- Dynamodb
-- Firestore
-- Elasticsearch
-
-## Storage
-![storage](https://camo.githubusercontent.com/8df4819a272d0e1c4cb235ce34448b4b4bb4fc480ced77238deacd98daafea1d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6a685a79423845364a4d547437714757473963666b412e706e67)
-- Samples are at [go-storage](https://github.com/project-samples/go-storage)
-
-### Health Check
-![health](https://camo.githubusercontent.com/49287a63a0e1c52818c4321650b3f8cf2348d5f50108aed820cd6441fbb2574d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6746457a416b7674666e51575665463265644b7767512e706e67)
+![Collection of libraries of core-go](https://cdn-images-1.medium.com/max/800/1*bnsHDzTXilvfmI-HbNnK9Q.png)
 
 ### Logging
 #### Providers
@@ -117,15 +203,15 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 
 ### Communication
 #### Email
-![Email](https://camo.githubusercontent.com/0fcd0826eea9b9883077ac1674e45c4eafa17e7abb02f8d2659fb30bc2b084e5/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a2d6c486a7872355a4d6b4b634c6961746776364731672e706e67)
+![Email](https://cdn-images-1.medium.com/max/800/1*-lHjxr5ZMkKcLiatgv6G1g.png)
 - Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 #### Message Queue
-![Message Queue](https://camo.githubusercontent.com/31291934a502f50fda6ec65981f77e601efa450f7ef32b3e4bd9041355d68e3e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a55624b4a753242634159696d385f6f4a67384e7336412e706e67)
+![Message Queue](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
 ##### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
 ##### Flow to consume a message from a queue
-![Flow to consume a message](https://camo.githubusercontent.com/782bbf69a516401c3918b7e920d8fc25521112d8b04e890f2455768551f6d64e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a593451554e36516e666d4a67614b6967634e486251412e706e67)
+![Flow to consume a message](https://cdn-images-1.medium.com/max/800/1*Y4QUN6QnfmJgaKigcNHbQA.png)
 - Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
 - Use [core-go/mq](https://github.com/core-go/mq)
 - Support these message queues:
@@ -149,11 +235,11 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 - Consume message and handle by batch
 
 ### Reusable business components
-![Reusable business components](https://camo.githubusercontent.com/d47b277783bd12f7560123878265c9446368a092937cf2d37fcf54c14e872d83/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4834474a415f53705f73366967396b5f41415a3561672e706e67)
+![Reusable business components](https://cdn-images-1.medium.com/max/800/1*H4GJA_Sp_s6ig9k_AAZ5ag.png)
 - The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 ### sign up
-![sign up](https://camo.githubusercontent.com/6731bc23c5c74d5a19a860ddc50a9af188434632ecfe5b2dda90397759b7de39/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a3073646b717a646479663339374e56776b56645269772e706e67)
+![sign up](https://cdn-images-1.medium.com/max/800/1*0sdkqzddyf397NVwkVdRiw.png)
 #### sign up with password
 - sign up with password
 - verify account (without password)
@@ -162,23 +248,23 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 - verify account (require to input password)
 
 ### authentication
-![Authentication](https://camo.githubusercontent.com/961908454560f4fdcd044a27e1741bc13d8440d794ad69d4fd6bf77023195701/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7652314a553030384e555234774b4567717766756f412e706e67)
+![Authentication](https://cdn-images-1.medium.com/max/800/1*vR1JU008NUR4wKEgqwfuoA.png)
 - authenticator
 - ldap authenticator
 - 2 factor authentication
 
 ### oauth2
-![oauth2](https://camo.githubusercontent.com/782b650c42e2a73f79e729e77176f3dbd5edf51b683e13ebdae0a6f5e4cdd7b2/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6153765054544461532d386c674f4164544d6e6335412e706e67)
+![oauth2](https://cdn-images-1.medium.com/max/800/1*aSvPTTDaS-8lgOAdTMnc5A.png)
 
 ### password
-![password](https://camo.githubusercontent.com/d27ddd22c67677cd23a53df92f070d54dce337caa2cf91ee1c36c354112f1551/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a79684969414c6a4a514a373062354866796265666b512e706e67)
+![password](https://cdn-images-1.medium.com/max/800/1*yhIiALjJQJ70b5HfybefkQ.png)
 - forgot password
 - change password (also support change password 2 factors)
 - reset password
 
 ## Low code
 ### Components
-![Components](https://camo.githubusercontent.com/c95340f3089dc8535b668c08bfa32086d3d7b64998f687284357fd27028eca95/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a476f314777666d704274566441556e747252327179512e706e67)
+![Components](https://cdn-images-1.medium.com/max/800/1*Go1GwfmpBtVdAUntrR2qyQ.png)
 #### Commandline
 ##### export
 - input: database, project settings
@@ -191,7 +277,7 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 - GUI, include "export" and "generate"
 
 ### Business View
-![Business View](https://camo.githubusercontent.com/8a7981234d8731878d566e6da0cd02804b93f4e9cd23c7e1ef33a810c5f66cee/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a68317942526c435750554d417653355a77356b3461672e706e67)
+![Business View](https://cdn-images-1.medium.com/max/800/1*h1yBRlCWPUMAvS5Zw5k4ag.png)
 #### Download
 - https://github.com/lowcode-tech/windows
 - https://github.com/lowcode-tech/mac
@@ -199,11 +285,8 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 #### Output Samples
 https://github.com/source-code-template
 ##### GO Layer Architecture Sample
-- https://github.com/source-code-template/mongo-layer-architecture-sample
-- https://github.com/source-code-template/go-sql-layer-architecture-sample
-##### GO Modular Sample
-- https://github.com/source-code-template/go-mongo-modular-sample
-- https://github.com/source-code-template/go-sql-modular-sample
+- https://github.com/source-code-template/go-sql-sample
+- https://github.com/source-code-template/go-mongo-sample
 ##### nodejs Layer Architecture Sample
 - https://github.com/source-code-template/mongo-layer-architecture-sample
 - https://github.com/source-code-template/sql-layer-architecture-sample
