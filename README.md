@@ -64,27 +64,35 @@ When you zoom one micro service, the flow is as below
 #### In the above image, you can see these libraries you need for a typical micro service
 
 ### Database
-- Simplify common database operations, such as CRUD (Create, Read, Update, Delete) operations, transactions, and batch processing, by providing high-level abstractions and utilities.
-- Generic CRUD Repository 
+- Simplify common database operations, such as CRUD (Create, Read, Update, Delete) operations, batch processing and transactions (for [SQL](https://github.com/core-go/sql)), by providing high-level abstractions and utilities.
+- Generic CRUD Repository
   - It is like [CrudRepository](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html) of Spring, which promotes rapid development and consistency across applications.
   - While it provides many advantages, such as reducing boilerplate code and ensuring transactional integrity, it also offers flexibility and control over complex queries.
-#### Support these databases
-- [SQL](https://github.com/core-go/sql). The sample is at [go-sql-generic-sample](https://github.com/source-code-template/go-sql-generic-sample).
-- [Mongo](https://github.com/core-go/mongo). The sample is at [go-mongo-generic-sample](https://github.com/source-code-template/go-mongo-generic-sample).
-- [Cassandra](https://github.com/core-go/cassandra). The sample is at [go-cassandra-sample](https://github.com/source-code-template/go-cassandra-sample).
-- [Firestore](https://github.com/core-go/firestore). The sample is at [go-firestore-sample](https://github.com/go-tutorials/go-firestore-sample).
-- [Elastic Search](https://github.com/core-go/elasticsearch). The sample is at [go-elastic-search-generic-sample](https://github.com/source-code-template/go-elastic-search-generic-sample).
-- [Hive](https://github.com/core-go/hive). The sample is at [go-hive-sample](https://github.com/go-tutorials/go-hive-sample).
-- [Dynamodb](https://github.com/core-go/dynamodb). The sample is at [go-dynamodb-tutorial](https://github.com/go-tutorials/go-dynamodb-tutorial).
+- My batis for GOLANG, nodejs
+  - Project sample is at [go-admin](https://github.com/project-samples/go-admin). Mybatis file is here [query.xml](https://github.com/project-samples/go-admin/blob/main/configs/query.xml)
+- Support:
+  - [SQL](https://github.com/core-go/sql). The sample is at [go-sql-generic-sample](https://github.com/source-code-template/go-sql-generic-sample).
+  - [Mongo](https://github.com/core-go/mongo). The sample is at [go-mongo-generic-sample](https://github.com/source-code-template/go-mongo-generic-sample).
+  - [Cassandra](https://github.com/core-go/cassandra). The sample is at [go-cassandra-sample](https://github.com/source-code-template/go-cassandra-sample).
+  - [Firestore](https://github.com/core-go/firestore). The sample is at [go-firestore-sample](https://github.com/go-tutorials/go-firestore-sample).
+  - [Elastic Search](https://github.com/core-go/elasticsearch). The sample is at [go-elastic-search-generic-sample](https://github.com/source-code-template/go-elastic-search-generic-sample).
+  - [Hive](https://github.com/core-go/hive). The sample is at [go-hive-sample](https://github.com/go-tutorials/go-hive-sample).
+  - [Dynamodb](https://github.com/core-go/dynamodb). The sample is at [go-dynamodb-tutorial](https://github.com/go-tutorials/go-dynamodb-tutorial).
 
 ### Data Processing
-Visit [github.com/core-go/io](https://github.com/core-go/io), you can see rich data processing:
+Visit [core-go/io](https://github.com/core-go/io), you can see rich data processing:
 - Import data from CSV or fix-length format files to [SQL](https://github.com/core-go/sql), [Mongo](https://github.com/core-go/mongo), [Cassandra](https://github.com/core-go/cassandra), [Firestore](https://github.com/core-go/firestore), [Elastic Search](https://github.com/core-go/elasticsearch), [Hive](https://github.com/core-go/hive)
 - Export data from [SQL](https://github.com/project-samples/go-sql-export), [Mongo](https://github.com/project-samples/go-mongo-export), [Cassandra](https://github.com/project-samples/go-cassandra-export), [Firestore](https://github.com/project-samples/go-firestore-export), [Hive](https://github.com/project-samples/go-hive-export) to CSV or fix-length format files
 
 ### Message Queue
 - Please visit [core-go/mq](https://github.com/core-go/mq).
 - Because message queues are a crucial component in modern software architecture, we support most of message queues, such as [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
+- Support 2 levels of 7 message queues:
+  - Standardize and simplify to use 7 message queues, for 9 libraries [rabbitmq/amqp091-go](https://github.com/rabbitmq/amqp091-go), [aws-sdk-go/service/sqs](https://github.com/aws/aws-sdk-go/tree/main/service/sqs), [go/pubsub](https://pkg.go.dev/cloud.google.com/go/pubsub), [ibmmq](https://github.com/ibm-messaging/mq-golang), [ActiveMQ](https://github.com/go-stomp/stomp), [nats.go](https://github.com/nats-io/nats.go), [segmentio/kafka-go](https://github.com/segmentio/kafka-go), [IBM/sarama](https://github.com/IBM/sarama) and [Confluent](https://github.com/confluentinc/confluent-kafka-go).
+  - Support standard level, which share the same interface with all message queues
+    - Abstract the consumer flow
+    - Support dead letter queue
+  - Support SDK or original library level, you can use all advance features of the SDK/libraries
 
 ### Health Check
 Please visit [core-go/health](https://github.com/core-go/health). We support databases, message queues, redis, http client:
@@ -93,8 +101,61 @@ Please visit [core-go/health](https://github.com/core-go/health). We support dat
 - Database: [sql](https://github.com/core-go/health/blob/main/sql/health_checker.go), [mongo](https://github.com/core-go/health/blob/main/mongo/health_checker.go), [dynamodb](https://github.com/core-go/health/blob/main/dynamodb/health_checker.go), [firestore](https://github.com/core-go/health/blob/main/firestore/health_checker.go), [elasticsearch](https://github.com/core-go/health/blob/main/elasticsearch/v8/health_checker.go), [cassandra](https://github.com/core-go/health/blob/main/cassandra/health_checker.go), [hive](https://github.com/core-go/health/blob/main/hive/health_checker.go)
 - Message queues: [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
 
+![health](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
 
-  ![health](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
+### Logging
+#### Providers
+Standardize API for logging, support 2 libraries:
+- [logrus](https://github.com/sirupsen/logrus)
+- [zap](go.uber.org/zap)
+
+#### Middleware Log Tracing
+- [middleware](https://github.com/core-go/middleware): Log request and response at http middleware, allow to configure dynamic field names
+
+#### Http Client Log Tracing
+- [client](https://github.com/core-go/client): Log request and response at http client, allow to configure dynamic field names
+
+#### Audit Log
+- Support for CRUD, search (not required in every application)
+
+### Caching
+#### Memory Cache
+Refer to [MemoryCacheService](https://github.com/core-go/redis/blob/main/cache/memory_cache_service.go) for more details
+- Time To Live: automatically clean up the expired objects in the memory cache
+- Maximum size: When the memory exceeds the max size (which is configurable), it automatically remove the oldest object.
+#### Redis
+The library is here [Redis](https://github.com/core-go/redis). Support 2 libraries:
+- [go-redis](https://github.com/go-redis/redis)
+- [redigo](https://github.com/garyburd/redigo)
+
+### Validator
+Check required, email, url, min, max, country code, phone number, regular expression...
+- [validator](https://github.com/core-go/validator)
+
+### Search
+Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoffice](https://github.com/project-samples/go-backoffice) and [go-location](https://github.com/project-samples/go-location)
+- Generate the model by URL
+- Paging
+- Sort
+#### Build a dynamic query for these providers
+- SQL
+- Mongo
+- Dynamodb
+- Firestore
+- Elasticsearch
+
+### Email
+- Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
+- [mail](https://github.com/core-go/mail)
+  - [smtp](https://github.com/core-go/mail/tree/main/smtp)
+  - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
+- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
+
+### Storage
+- [storage](https://github.com/core-go/storage)
+  - [Google](https://github.com/core-go/storage/tree/main/google)
+  - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
+- Samples are at [go-storage](https://github.com/project-samples/go-storage)
 
 ### Authentication
 Please visit [Authentication](https://github.com/core-go/authentication), we support:
@@ -111,132 +172,8 @@ Sample is [go-admin](https://github.com/project-samples/go-admin)
 - Crypto
 - JWT
 
-### Logging
-- [log](https://github.com/core-go/log)
-  - Wrap logrus and zap 
-- [middleware](https://github.com/core-go/middleware)
-  - Middleware logging is a technique used in software development, particularly in web and microservices applications, to log important information about incoming requests, outgoing responses, and the operations performed by the application.
-
-### Email
-- Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
-- [mail](https://github.com/core-go/mail)
-  - [smtp](https://github.com/core-go/mail/tree/main/smtp)
-  - [sendgrid](https://github.com/core-go/mail/tree/main/sendgrid)
-- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
-
-  ![Email](https://cdn-images-1.medium.com/max/800/1*-lHjxr5ZMkKcLiatgv6G1g.png) 
-
-### Storage
-- [storage](https://github.com/core-go/storage)
-  - [Google](https://github.com/core-go/storage/tree/main/google)
-  - [Amazon S3](https://github.com/core-go/storage/tree/main/s3)
-- Samples are at [go-storage](https://github.com/project-samples/go-storage)
-
-  ![storage](https://cdn-images-1.medium.com/max/800/1*jhZyB8E6JMTt7qGWG9cfkA.png)
-
 ### Others
 - [config](https://github.com/core-go/config)
-- [cache](https://github.com/core-go/cache)
-- [redis](https://github.com/core-go/redis)
-- [validator](https://github.com/core-go/validator)
-- [client](https://github.com/core-go/client)
-
-#### Hexagonal Architecture
-![Hexagonal Architecture](https://cdn-images-1.medium.com/max/800/1*Dmf57O2Fkbx6kteaq5RVUw.png)
-
-### Cross-cutting concerns
-![cross-cutting concerns](https://cdn-images-1.medium.com/max/800/1*y088T4NoJNrL9sqrKeSyqw.png)
-- We provide many libraries to minimize effort for cross-cutting concerns, which can be used by an AOP framework
-- We do not implement an AOP framework
-
-#### Evaluate effort for cross-cutting concerns
-![Effort for cross-cutting concerns](https://cdn-images-1.medium.com/max/800/1*hw4u8dnuXmd6hVIv0Svuyg.png)
-
-### Summary: Libraries of core-go
-![Collection of libraries of core-go](https://cdn-images-1.medium.com/max/800/1*bnsHDzTXilvfmI-HbNnK9Q.png)
-
-### Logging
-#### Providers
-Standardize API for logging, support 2 libraries:
-- [logrus](https://github.com/sirupsen/logrus)
-- [zap](go.uber.org/zap)
-
-#### Request Tracing
-- [middleware](https://github.com/core-go/middleware): Log request and response at http middleware, allow to configure dynamic field names
-- [client](https://github.com/core-go/client): Log request and response at http client, allow to configure dynamic field names
-
-#### Audit Log
-- Support for CRUD, search (not required in every application)
-
-### Security
-Sample is [go-admin](https://github.com/project-samples/go-admin)
-- Identity and Access Management: Authorization at middleware, support http ([mux](https://github.com/gorilla/mux), [chi](https://github.com/go-chi/chi)), [gin](https://github.com/gin-gonic/gin), [echo](https://github.com/labstack/echo)
-- Crypto
-- JWT
-
-- library is here [security](https://github.com/core-go/security)
-
-### Caching
-#### Memory Cache
-- Time To Live: automatically clean up the expired objects in the memory cache
-- Maximum size: When the memory exceeds the max size (which is configurable), it automatically remove the oldest object.
-#### Redis
-Support 2 libraries
-- [go-redis](https://github.com/go-redis/redis)
-- [redigo](https://github.com/garyburd/redigo)
-
-### Validator
-Check required, email, url, min, max, country code, phone number, regular expression... 
-- [validator](https://github.com/core-go/validator)
-
-### Search
-Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoffice](https://github.com/project-samples/go-backoffice) and [go-location](https://github.com/project-samples/go-location)
-- Generate the model by URL
-- Paging
-- Sort
-#### Build a dynamic query for these providers
-- SQL
-- Mongo
-- Dynamodb
-- Firestore
-- Elasticsearch
-
-### Communication
-#### Email
-![Email](https://cdn-images-1.medium.com/max/800/1*-lHjxr5ZMkKcLiatgv6G1g.png)
-- Build some standard interfaces, which can be shared by multiple providers: SMTP and Sendgrid
-- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
-
-#### Message Queue
-![Message Queue](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
-##### The samples are [go-subscription](https://github.com/project-samples/go-subscription) and [go-batch-subscription](https://github.com/project-samples/go-batch-subscription)
-##### Flow to consume a message from a queue
-![Flow to consume a message](https://cdn-images-1.medium.com/max/800/1*Y4QUN6QnfmJgaKigcNHbQA.png)
-- Consume a message from queue, then write the message to database (SQL, Mongo, Casandra, Dynamodb, Firestore, Elasticsearch)
-- Use [core-go/mq](https://github.com/core-go/mq)
-- Support these message queues:
-  - Amazon Simple Queue Service (SQS) at [sqs](https://github.com/core-go/mq/tree/main/sqs)
-  - Google Cloud Pub/Sub at [pubsub](https://github.com/core-go/mq/tree/main/pubsub)
-  - Kafka: at [segmentio/kafka-go](https://github.com/core-go/mq/tree/main/kafka), [Shopify/sarama](https://github.com/core-go/mq/tree/main/sarama) and [confluent](https://github.com/core-go/mq/tree/main/confluent)
-  - NATS at [nats](https://github.com/core-go/mq/tree/main/nats)
-  - Active MQ at [activemq](https://github.com/core-go/mq/tree/main/activemq)
-  - RabbitMQ at [rabbitmq](https://github.com/core-go/mq/tree/main/rabbitmq)
-  - IBM MQ at [ibmmq](https://github.com/core-go/mq/tree/main/ibmmq)
-- Support these databases
-  - SQL
-  - Mongo
-  - Casandra
-  - Dynamodb
-  - Firestore
-  - Elasticsearch
-
-##### Support 2 reusable business flows
-- Consume message and handle one by one
-- Consume message and handle by batch
-
-### Reusable business components
-![Reusable business components](https://cdn-images-1.medium.com/max/800/1*H4GJA_Sp_s6ig9k_AAZ5ag.png)
-- The sample is [go-authentication](https://github.com/project-samples/go-authentication)
 
 ### sign up
 ![sign up](https://cdn-images-1.medium.com/max/800/1*0sdkqzddyf397NVwkVdRiw.png)
@@ -261,6 +198,17 @@ Samples are [go-admin](https://github.com/project-samples/go-admin), [go-backoff
 - forgot password
 - change password (also support change password 2 factors)
 - reset password
+
+## Summary:
+- Libraries of core-go
+
+![Collection of libraries of core-go](https://cdn-images-1.medium.com/max/800/1*bnsHDzTXilvfmI-HbNnK9Q.png)
+
+### Cross-cutting concerns
+![cross-cutting concerns](https://cdn-images-1.medium.com/max/800/1*y088T4NoJNrL9sqrKeSyqw.png)
+
+### Hexagonal Architecture
+![Hexagonal Architecture](https://cdn-images-1.medium.com/max/800/1*Dmf57O2Fkbx6kteaq5RVUw.png)
 
 ## Low code
 ### Components
