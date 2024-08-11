@@ -101,7 +101,7 @@ Please visit [core-go/health](https://github.com/core-go/health). We support dat
 - Database: [sql](https://github.com/core-go/health/blob/main/sql/health_checker.go), [mongo](https://github.com/core-go/health/blob/main/mongo/health_checker.go), [dynamodb](https://github.com/core-go/health/blob/main/dynamodb/health_checker.go), [firestore](https://github.com/core-go/health/blob/main/firestore/health_checker.go), [elasticsearch](https://github.com/core-go/health/blob/main/elasticsearch/v8/health_checker.go), [cassandra](https://github.com/core-go/health/blob/main/cassandra/health_checker.go), [hive](https://github.com/core-go/health/blob/main/hive/health_checker.go)
 - Message queues: [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
 
-![health](https://cdn-images-1.medium.com/max/800/1*wiWnkgzUoSgJT9QUXfzI8A.png)
+![health](https://cdn-images-1.medium.com/max/800/1*k-VjYL3UL9Zohwzas4nb8Q.png)
 
 ### Logging
 #### Providers
