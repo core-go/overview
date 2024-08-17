@@ -85,25 +85,26 @@ Visit [core-go/io](https://github.com/core-go/io), you can see rich data process
 - Export data from [SQL](https://github.com/project-samples/go-sql-export), [Mongo](https://github.com/project-samples/go-mongo-export), [Cassandra](https://github.com/project-samples/go-cassandra-export), [Firestore](https://github.com/project-samples/go-firestore-export), [Hive](https://github.com/project-samples/go-hive-export) to CSV or fix-length format files
 
 ### Message Queue
-- Please visit [core-go/mq](https://github.com/core-go/mq).
+Please visit [core-go/mq](https://github.com/core-go/mq), Linked In article [Standardize-7-Message-Queues](https://www.linkedin.com/pulse/standardize-message-queues-golang-duc-nguyen-ekabc).
 - Because message queues are a crucial component in modern software architecture, we support most of message queues, such as [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
 - Support 2 levels of 7 message queues:
-  - Standardize and simplify to use 7 message queues, for 9 libraries [rabbitmq/amqp091-go](https://github.com/rabbitmq/amqp091-go), [aws-sdk-go/service/sqs](https://github.com/aws/aws-sdk-go/tree/main/service/sqs), [go/pubsub](https://pkg.go.dev/cloud.google.com/go/pubsub), [ibmmq](https://github.com/ibm-messaging/mq-golang), [ActiveMQ](https://github.com/go-stomp/stomp), [nats.go](https://github.com/nats-io/nats.go), [segmentio/kafka-go](https://github.com/segmentio/kafka-go), [IBM/sarama](https://github.com/IBM/sarama) and [Confluent](https://github.com/confluentinc/confluent-kafka-go).
+  - Standardize and simplify 7 message queues, for 9 libraries [rabbitmq/amqp091-go](https://github.com/rabbitmq/amqp091-go), [aws-sdk-go/service/sqs](https://github.com/aws/aws-sdk-go/tree/main/service/sqs), [go/pubsub](https://pkg.go.dev/cloud.google.com/go/pubsub), [ibmmq](https://github.com/ibm-messaging/mq-golang), [ActiveMQ](https://github.com/go-stomp/stomp), [nats.go](https://github.com/nats-io/nats.go), [segmentio/kafka-go](https://github.com/segmentio/kafka-go), [IBM/sarama](https://github.com/IBM/sarama) and [Confluent](https://github.com/confluentinc/confluent-kafka-go).
   - Support standard level, which share the same interface with all message queues
     - Abstract the consumer flow
     - Support dead letter queue
   - Support SDK or original library level, you can use all advance features of the SDK/libraries
 
 ### Health Check
-Please visit [core-go/health](https://github.com/core-go/health). We support databases, message queues, redis, http client:
+Please visit [core-go/health](https://github.com/core-go/health) and [Microservice Health Check](https://www.linkedin.com/pulse/microservice-health-check-go-nodejs-duc-nguyen-qunvc). We support databases, message queues, redis, http client:
 - [http client](https://github.com/core-go/health/blob/main/http/health_checker.go)
 - Redis: [go-redis/redis](https://github.com/core-go/health/blob/main/redis/v9/health_checker.go) to support [redis/go-redis](https://github.com/redis/go-redis), [garyburd/redigo](https://github.com/core-go/health/blob/main/redigo/health_checker.go) to support [gomodule/redigo](https://github.com/gomodule/redigo).
 - Database: [sql](https://github.com/core-go/health/blob/main/sql/health_checker.go), [mongo](https://github.com/core-go/health/blob/main/mongo/health_checker.go), [dynamodb](https://github.com/core-go/health/blob/main/dynamodb/health_checker.go), [firestore](https://github.com/core-go/health/blob/main/firestore/health_checker.go), [elasticsearch](https://github.com/core-go/health/blob/main/elasticsearch/v8/health_checker.go), [cassandra](https://github.com/core-go/health/blob/main/cassandra/health_checker.go), [hive](https://github.com/core-go/health/blob/main/hive/health_checker.go)
 - Message queues: [Kafka](https://github.com/project-samples/go-kafka-sample), [RabbitMQ](https://github.com/project-samples/go-rabbit-mq-sample), [IBMMQ](https://github.com/project-samples/go-ibm-mq-sample), [Active MQ](https://github.com/project-samples/go-active-mq-sample), [NATS](https://github.com/project-samples/go-nats-sample), [Google Pub/Sub](https://github.com/project-samples/go-pubsub-sample), [Amazon SQS](https://github.com/project-samples/go-amazon-sqs-sample).
 
-![health](https://cdn-images-1.medium.com/max/800/1*k-VjYL3UL9Zohwzas4nb8Q.png)
+![health](https://cdn-images-1.medium.com/max/800/1*NreJfea6tHobxMpiq96PPQ.png)
 
 ### Logging
+Visit [core-go/log](https://github.com/core-go/log) and [Middleware-Log-Tracing](https://www.linkedin.com/pulse/middleware-log-tracing-go-duc-nguyen-uh0pc) for more details.
 #### Providers
 Standardize API for logging, support 2 libraries:
 - [logrus](https://github.com/sirupsen/logrus)
@@ -116,7 +117,7 @@ Standardize API for logging, support 2 libraries:
 - [client](https://github.com/core-go/client): Log request and response at http client, allow to configure dynamic field names
 
 #### Audit Log
-- Support for CRUD, search (not required in every application)
+- Support for CRUD, search (not required in every application). Sample is at [go-backoffice](https://github.com/project-samples/go-backoffice).
 
 ### Caching
 #### Memory Cache
